@@ -1,0 +1,47 @@
+<%- include('partials/header') %>
+
+<div class="frm">
+     <form action="/" method="post">
+
+         <%- include('partials/businesslist') %>
+
+         <%- include('partials/locationlist') %>
+
+         <input type="submit" value="Search" name=""/>
+     </form>
+ </div>
+ 
+<div class="search">
+     <div class="searchtitle">
+          <h3><%= what %> in <%= where %></h3>
+     </div>
+     
+     <% if(record.length === 0) { %>
+          <p>No result match</p>
+         <% }else{ %>
+         
+               <% record.forEach(function(eachrec){ %>
+                    <div class="eachrec">
+                         <div class="logo_2">
+                             <img src="data:image/<%=eachrec.upload.contentType%>;base64, <%= eachrec.upload.data.toString('base64')%>" width="20%" height="20%">
+                         </div>
+                         <p>Company Name   : <strong> <%= eachrec.bName %> </strong> </p>
+                         <p>Contact Person : <strong> <%= eachrec.cName %> </strong> </p>
+                         <p>CAC Status     : <strong> <%= eachrec.cacStatus %> </strong> </p>
+                         <p>Contact Number : <strong> <%= eachrec.cNumber %> </strong> </p>
+                         <p>Contact eMail  : <strong> <%= eachrec.cEmail %> </strong> </p>
+                         <p>Website        : <strong> <%= eachrec.website %> </strong> </p>
+                         <p>Address        : <strong> <%= eachrec.address %> </strong> </p>
+                         <!-- <hr/> -->
+               </div>
+               <% }) %>
+       
+        <% } %>
+</div>
+
+<p>
+     <a href="/">Back to Home</a>
+</p>
+
+
+<%- include('partials/footer') %>

@@ -1,0 +1,124 @@
+<%- include('partials/header') %>
+
+<div class="regis">
+    
+    <h3>Artisan Registration Form</h3>
+    
+
+    <form action="/artisan/register" method="post" enctype="multipart/form-data">
+       
+        <%- include('./partials/messages') %>
+
+        <p>
+            <input type="text" name ="cName" placeholder="Contact Name" required/>
+        </p>
+        <p>
+            <input type="text" name ="cNumber" placeholder="Contact Phone Number" required/>
+        </p>
+        <input type="email" name ="cEmail" placeholder="Contact eMail" required/>
+
+        <p>
+            <input type="text" name ="bName" placeholder="Business Name" required />
+        </p>
+
+        <% let industry = ["Fashion Design", "Capentry", "AC Repair", "Beauty Salon/SPA",
+                            "Plumbers",
+                            "Automobile Mechanics",
+                            "Information Technology",
+                            "Catering Services",
+                            "Event Management and Planning",
+                            "General Mechandise",
+                            "Industrial Cleaning Services"]  %>
+
+        <select name="industry" class="indus">
+            <option>Choose Your Industry</option>
+            <% industry.forEach(function(jindustry){  %>
+                <option value="<%= jindustry %>"><%= jindustry %></option>
+            <% }) %>
+        </select>
+      
+
+        <p>Are you registered with CAC? 
+            Yes <input type="radio" name="cacStatus" value="Registered" />  
+            No <input type="radio" name="cacStatus" value="Not Registered" />
+        </p>
+
+        <% let jtitles = ["CEO", "Operations Manager", "Marketing Manager", "Sales Manager"]  %>
+
+        <select name="title" class="indus">
+            <option>Your Job Title</option>
+            <% jtitles.forEach(function(jtitle){  %>
+                <option value="<%= jtitle %>"><%= jtitle %></option>
+            <% }) %>
+        </select>
+
+        <% let strengths  = ["1", "2-5", "6-10", "11-20", "21-50", "51-above"]  %>
+
+        <select name="staffStrength" class="indus">
+            <option>Your Staff Strength</option>
+            <% strengths.forEach(function(strength){  %>
+                <option value="<%= strength %>"><%= strength %></option>
+            <% }) %>
+        </select>
+
+        <p>       
+            <input type="text" name="address" placeholder="Contact Address" required />
+        </p>
+
+        <!-- <p>
+            <input type="text" name="city" placeholder="City" required />
+        </p> -->
+
+        
+        <% let city = ["Lagos-Island-Ajah", 
+        "Lagos-Island-VI", "Lagos-Mainland", 
+        "Lagos-Ogun Axis", 
+        "Abuja-FCT",
+        "Abuja-Outskirts",
+        "Ibadan",
+        "Kwara",
+        "Ondo",
+        "Ekiti",
+        "Kaduna",
+        "Kanos"]  %>
+
+        <select name="city" class="indus">
+            <option value="option">Where is your business located</option>
+            <% city.forEach(function(jcity){  %>
+            <option value="<%= jcity %>"><%= jcity %></option>
+            <% }) %>
+        </select>
+
+        <p>
+            <input type="text" name="website" placeholder="Website URL" required />
+
+        </p>
+        <p>
+            <input type="text" name="username" placeholder="Preffered Username" required />
+        </p>
+        <p>
+            <input type="password" name="password" placeholder="Password" required />
+        </p>
+        <p>
+            <input type="password" name="password2" placeholder="Confirm Password" required /> 
+        </p>
+
+        <p>
+           <input type="file" name="image" placeholder="Upload your company Logo" >
+        </p>
+
+              <p>
+            <input type="submit" name="submit" value="Click to Submit">
+
+        </p>
+
+        
+
+
+
+
+    </form>
+
+</div>
+
+<%- include('partials/footer') %>

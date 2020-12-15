@@ -1,0 +1,477 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* for error message display */
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px;
+}
+
+.alert.success {background-color: #4CAF50;}
+.alert.info {background-color: #2196F3;}
+.alert.warning {background-color: #ff9800;}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+
+/* end here */
+
+
+body{
+    background-color: #c9c8c8;
+
+}
+
+.container{
+    border: 1px solid #E83E52;
+    width: 100%;
+    /* background-color: rgb(240, 239, 239); */
+    /* height: 180px; */
+
+}
+
+
+.header, .footer{
+    width: 100%;
+    background-color: #E83E52;
+    height: 100px;
+}
+
+.header .logo{
+    width: 89px;
+    height: 79px;
+    /* background:  url('/images/logo.png') cover center no-repeat; */
+    background-image: url('/images/logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    top: 10px;
+    margin-left: 50px;
+    /* margin-top: 20px; */
+}
+
+/* styling the title to be on the same line with the logo */
+
+.header, .footer{
+   position: relative;  
+}
+
+.header h3{
+    color: #1F304C;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+    position: absolute;  
+    left: 13%;
+    top: 35px;
+}
+
+/* styling the Navigation Bar to be on the right side*/
+
+.header .nav{
+    position: absolute;
+    right: 5%;
+    top: 35px;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* styling the Navigation Menu*/
+
+.header .nav a{
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    letter-spacing: 2px;
+    display: inline-block;
+    padding: 15px 20px;
+
+}
+
+.header .nav a:hover{
+   background-color: #fff;
+   color: #E83E52;
+
+}
+
+/* styling the upper body*/
+
+.banner, .frm, .advert {
+    border: 1px solid #E83E52;
+    width: 76%;
+    margin-left: 12%;
+    margin-bottom: 10px;
+   
+}
+
+.banner{
+    height: 300px;
+    background-color: white;
+    position: relative;
+    border-radius: 20px;
+
+  }
+
+ .banner h1{
+    position: absolute;
+    left: 10%;
+    top: 18%;
+    width: 350px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.banner h5{
+    position: absolute;
+    left: 10%;
+    top: 90%;
+    width: 350px;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.banner button {
+    width: 500px;
+    height: 70px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #2c2c2c;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    position: absolute;
+    left: 10%;
+    top: 60%;
+    text-decoration: none;    
+}
+
+  .advert{
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+
+  }
+
+  .advert h3{
+      padding-top: 6%;
+      font-size: 25px;
+      font-weight: bolder;
+      text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+  }
+
+
+  /* padding is space between content and the containing block */
+
+.frm{
+      height: 65px;
+      padding: 10px; 
+    border-radius: 10px;
+
+  }
+
+.frm  select, option {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+    color: #1f304c;
+    
+}
+
+.frm  input[type=submit] {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #E83E52;
+    color: #fff;
+    cursor: pointer;
+    border: 0px;
+    margin-left: 8px;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    
+}
+/* 
+.viewall {
+     margin-left: 8%;
+     background-color: #9c5e65;
+} */
+
+
+.frm  input:hover{
+    background-color: rgb(92, 92, 92);
+    color: #fff;
+ 
+ }
+
+
+ .footer h3{
+    color: #1F304C;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    /* position: absolute;   */
+    /* left: 13%; */
+    top: 35px;
+}
+
+
+.platform{
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 100%;
+    margin: 10px;
+    background-color: #fff;
+    display: inline-block;
+       
+}
+
+.socialmedia{
+    border: 0px solid #fff;
+    position: absolute;
+    left: 40%;
+    top: 10px;
+   
+}
+
+.socialmedia h3, p{
+    text-align: center;
+    color: #fff;
+}
+
+.platform.fb, .platform.tw, .platform.ig, .platform.wa{
+  float: left;
+ }
+
+  
+.regis{
+    width: 76%;
+    background-color: #ca7881;
+    height: 1200px;
+    border: 1px solid #E83E52;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 12%;
+    border-radius: 20px;
+    
+}
+
+.regis p{
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.regis h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    /* letter-spacing: 1px; */
+}
+
+
+
+.regis input[type="text"], input[type="email"], input[type="password"] {
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #1f304c;
+    /* display: block; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+}
+
+.indus{
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #1f304c;
+    /* display: block; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.regis  select {
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-weight: bolder;
+    color: #1f304c;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+
+ .regis input[type=submit], .loginpage input[type=submit] {
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #E83E52;
+    color: #fff;
+    cursor: pointer;
+    border: 0px;
+    margin-left: -8px;
+    font-weight: bolder;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 20px;
+    margin-top: 10px;
+    
+}
+
+.regis input[type=submit]:hover{
+    background-color: rgb(92, 92, 92);
+    color: #fff;
+ 
+ }
+
+
+ .loginpage{
+    width: 76%;
+    background-color: #ca7881;
+    height: 300px;
+    border: 1px solid #E83E52;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 12%;
+    border-radius: 20px;
+    
+}
+
+.loginpage h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    /* letter-spacing: 1px; */
+}
+
+
+.loginpage input[type=submit]:hover{
+    background-color: rgb(92, 92, 92);
+    color: #fff;
+ 
+ }
+
+ .loginpage input[type="text"], input[type="email"], input[type="password"]  {
+    width: 500px;
+    height: 40px;
+    border-radius: 10px;
+    font-weight: bolder;
+    color: #1f304c;
+    /* display: block; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    
+}
+
+.search p{
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+    font-style: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin-left: 12%;
+    margin-bottom: 10px;
+
+}
+
+.searchtitle{
+    border: 1px solid #E83E52;
+    width: 76%;
+    margin-left: 12%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: rgba(156, 152, 152, 0.568);
+}
+
+.search h3{
+    margin-top: 10px;
+    margin-left: 12%;
+    margin-bottom: 10px; 
+    text-align: center;
+}
+
+.eachrec{
+    border: 1px solid #E83E52;
+    width: 76%;
+    margin-left: 12%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    background-color: rgba(156, 152, 152, 0.568);
+
+}
+
+.eachrec hr{
+    border: 3px solid #E83E52;
+   }
+
+.logo_2{
+    margin-top: 10px;
+    margin-left: 12%;
+    margin-bottom: 10px;
+    border-radius: 20px;
+   
+}

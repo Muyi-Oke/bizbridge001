@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+
+
+    <div class="frm">
+        <form action="/" method="post">
+
+            <%- include('partials/businesslist') %>
+
+<!--                     
+                <% let what = ["Fashion Design", 
+                "Capentry", 
+                "AC Repair", 
+                "Beauty Salon/SPA",
+                "Plumbers",
+                "Automobile Mechanics",
+                "Information Technology",
+                "Catering Services",
+                "Event Management and Planning",
+                "General Mechandise",
+                "Industrial Cleaning Services"]  %>
+
+                <select name="what" class="indus">
+                    <option value="option">Which Service Do You Need</option>
+                    <% what.forEach(function(jwhat){  %>
+                    <option value="<%= jwhat %>"><%= jwhat %></option>
+                    <% }) %>
+                </select> -->
+
+                <%- include('partials/locationlist') %>
+
+<!-- 
+            <% let where = ["Lagos-Island-Ajah", 
+            "Lagos-Island-VI", "Lagos-Mainland", 
+            "Lagos-Ogun Axis", 
+            "Abuja-FCT",
+            "Abuja-Outskirts",
+            "Ibadan",
+            "Kwara",
+            "Ondo",
+            "Ekiti",
+            "Kaduna",
+            "Kanos"]  %>
+
+            <select name="where" class="indus">
+                <option value="option">Where did you need it</option>
+                <% where.forEach(function(jwhere){  %>
+                <option value="<%= jwhere %>"><%= jwhere %></option>
+                <% }) %>
+            </select> -->
+
+            <input type="submit" value="Search" name=""/>
+        </form>
+    </div>
+
+    <div class="advert">
+        <h1>Place your advert here</h1>
+    </div>
+
+    <%- include('partials/footer') %>

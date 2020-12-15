@@ -1,0 +1,19 @@
+
+            <% let where = ["Lagos-Island-Ajah", 
+            "Lagos-Island-VI", "Lagos-Mainland", 
+            "Lagos-Ogun Axis", 
+            "Abuja-FCT",
+            "Abuja-Outskirts",
+            "Ibadan",
+            "Kwara",
+            "Ondo",
+            "Ekiti",
+            "Kaduna",
+            "Kanos"]  %>
+
+            <select name="where" class="indus">
+                <option value="option">Where did you need it</option>
+                <% where.forEach(function(jwhere){  %>
+                <option value="<%= jwhere %>"><%= jwhere %></option>
+                <% }) %>
+            </select>

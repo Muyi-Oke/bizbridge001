@@ -1,0 +1,45 @@
+
+ 
+  <%  var xmenu = "Login"; %>
+  <%  var xmenuR = "/artisan/logout"; %>
+  <% if (name !== null && name !== '') { xmenu = "Logout"} ;%>
+  <% if (xmenu == "Login") { xmenuR = xmenuR = "/artisan/login"} ;%>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="/styles/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="/css/styles.css"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <title>BizBridge</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <a href="/">
+                <div class="logo"></div>
+                <h3>BizBridge</h3>
+            </a>
+            <div class="nav">
+                <a href="">About Us</a>
+                <a href="/pricing">Princing</a>
+                <!-- <a href="/artisan/login">Login</a> -->
+                <a href=" <%= xmenuR %>"><%= xmenu %></a>
+                <a href="/artisan/register">Get Your Service Enlisted</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner">
+        <h1>We Bring Clients & Reputable Service Provider Together</h1>
+          <button type="button"><a href="/artisan/register">Get Your Service Enlisted</a></button>
+       <h5>Welcome: <%= name %></h5>
+    </div>
+    
+    
+
+   

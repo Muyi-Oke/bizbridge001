@@ -1,0 +1,69 @@
+<% if(typeof errors != 'undefined') { %>
+  <% errors.forEach(function(error) { %>
+   
+  <div class="alert info">
+    <span class="closebtn">&times;</span>  
+    <strong>Info! <%= error.msg %></strong>  
+  </div>
+
+ <% }); %>
+<% } %>
+
+<% if(success_msg != '') { %>
+  <div class="alert success">
+    <span class="closebtn">&times;</span>  
+    <strong>Success!</strong> Indicates a successful or positive action.
+  </div>
+<% } %>
+
+
+<% if(error_msg != '') { %>
+  <div class="alert warning">
+    <span class="closebtn">&times;</span>  
+    <strong>Warning!  <%= error %> </strong> Indicates a warning that might need attention.
+  </div>
+<% } %>
+
+
+<% if(error != '') { %>
+  <div class="alert warning">
+    <span class="closebtn">&times;</span>  
+    <strong>Warning!  <%= error %> </strong> Indicates a warning that might need attention.
+  </div>
+<% } %>
+
+<script>
+  var close = document.getElementsByClassName("closebtn");
+  var i;
+  
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function(){
+      var div = this.parentElement;
+      div.style.opacity = "0";
+      setTimeout(function(){ div.style.display = "none"; }, 600);
+    }
+  }
+  </script>
+  
+
+<!-- 
+
+<div class="alert">
+  <span class="closebtn">&times;</span>  
+  <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+</div>
+
+<div class="alert success">
+  <span class="closebtn">&times;</span>  
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+
+<div class="alert info">
+  <span class="closebtn">&times;</span>  
+  <strong>Info!</strong> Indicates a neutral informative change or action.
+</div>
+
+<div class="alert warning">
+  <span class="closebtn">&times;</span>  
+  <strong>Warning!</strong> Indicates a warning that might need attention.
+</div> -->
